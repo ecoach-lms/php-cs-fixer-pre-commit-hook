@@ -1,4 +1,4 @@
-- php-cs-fixer-dry-run
+- id: php-cs-fixer-dry-run
   name: Fabpot PHP CS Fixer (Dry Run)
   description: Runs Fabpot's PHP CS Fixer to detect evil php
   entry: pre_commit_hooks/php-cs-fixer-dry-run.sh
