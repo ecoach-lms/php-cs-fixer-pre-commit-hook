@@ -8,6 +8,7 @@ fixers=(
   newline_after_open_tag
   multiline_spaces_before_semicolon
   -phpdoc_to_comment
+  -empty_return
 )
 
 y=0
