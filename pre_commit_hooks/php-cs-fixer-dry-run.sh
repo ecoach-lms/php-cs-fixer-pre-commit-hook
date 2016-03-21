@@ -13,7 +13,7 @@ fixers=(
 
 y=0
 for x in "$@"; do
-  php -n ./bin/php-cs-fixer fix $x --dry-run --config=sf23 --level=symfony --fixers=${(j:,:)fixers} -n --ansi --format=txt --diff
+  ./bin/php-cs-fixer fix $x --dry-run --config=sf23 --level=symfony --fixers=${(j:,:)fixers} -n --ansi --format=txt --diff
   err=$?
   [[ $y = 0 ]] && y=$err
 done
