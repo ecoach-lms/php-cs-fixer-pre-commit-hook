@@ -9,6 +9,7 @@ fixers=(
   multiline_spaces_before_semicolon
   -phpdoc_to_comment
   -empty_return
+  -return
 )
 
 y=0
