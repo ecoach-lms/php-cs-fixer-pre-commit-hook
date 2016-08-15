@@ -4,7 +4,6 @@ fixers=(
   -concat_without_spaces
   phpdoc_order
   ordered_use
-  no_blank_lines_before_namespace
   newline_after_open_tag
   multiline_spaces_before_semicolon
   -phpdoc_to_comment
