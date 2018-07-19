@@ -1,0 +1,7 @@
+{
+    "name": "ecoach-lms/php-cs-fixer-pre-commit-hook",
+    "description": "https://pre-commit.com hook for running PHP CS Fixer over your codebase",
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.12"
+    }
+}

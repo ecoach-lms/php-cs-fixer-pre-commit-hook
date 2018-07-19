@@ -1,20 +1,11 @@
 #!/usr/bin/env zsh
-fixers=(
-  concat_with_spaces
-  -concat_without_spaces
-  phpdoc_order
-  ordered_use
-  newline_after_open_tag
-  multiline_spaces_before_semicolon
-  -phpdoc_to_comment
-  -empty_return
-  -return
-)
+HOOK_DIR=${0:h:h}
+FIXER=$HOOK_DIR/vendor/bin/php-cs-fixer
 
-y=0
-for x in "$@"; do
-  ./bin/php-cs-fixer fix $x --dry-run --config=sf23 --level=symfony --fixers=${(j:,:)fixers} -n --ansi --format=txt --diff
-  err=$?
-  [[ $y = 0 ]] && y=$err
-done
-exit $y
+if ! [[ -x $FIXER ]]; then
+  pushd $HOOK_DIR || exit $?
+  composer install 2>/dev/null || exit $?
+  popd || exit $?
+fi
+
+exec $FIXER fix --config=$HOOK_DIR/config.php --ansi --diff --dry-run "$@" 2>/dev/null
