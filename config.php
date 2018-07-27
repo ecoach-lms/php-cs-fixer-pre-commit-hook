@@ -11,6 +11,7 @@ $rules = [
 	'ordered_imports' => true,
 	'phpdoc_order' => true,
 	'phpdoc_to_comment' => false,
+	'yoda_style' => null,
 ];
 
 return PhpCSFixer\Config::create()->setRules($rules);
