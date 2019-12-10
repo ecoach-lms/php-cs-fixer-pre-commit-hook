@@ -6,6 +6,7 @@ $rules = [
 	'@Symfony' => true,
 	'array_syntax' => ['syntax' => 'short'],
 	'blank_line_before_statement' => false,
+	'class_definition' => ['multi_line_extends_each_single_line' => true],
 	'concat_space' => ['spacing' => 'one'],
 	'multiline_whitespace_before_semicolons' => true,
 	'ordered_imports' => true,
